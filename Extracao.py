@@ -29,11 +29,12 @@ sleep(3)
 # Preparar array para receber informações
 receptor = []
 
-# Abrir site e inserir "https://www.reddit.com/r/EscapefromTarkov/comments/vqo4qn/lockpick_is_it_really_a_necessity/" no campo xpath "//*[@id="redditPostInput"]"
-navegador.find_element("xpath", "//*[@id='redditPostInput']").send_keys("https://www.reddit.com/r/EscapefromTarkov/comments/vqo4qn/lockpick_is_it_really_a_necessity/")
+# Abrir site e inserir "https://www.reddit.com/r/StrangerThings/comments/w3kn0g/what_are_your_theories_on_what_the_stranger/" no campo xpath "//*[@id="redditPostInput"]"
+navegador.find_element("xpath", "//*[@id='redditPostInput']").send_keys("https://www.reddit.com/r/StrangerThings/comments/w3kn0g/what_are_your_theories_on_what_the_stranger/")
 # Esperar 3 segundos
 sleep(3)
 
+# Acompanhar por 1 hora o processo. 60 loops, onde cada um conta com 60 segundos de sleep.
 for i in range(1,60):
 # Coletar informações
     col1 = str(navegador.find_element("xpath", "//*[@id='postScore']").text)                   
